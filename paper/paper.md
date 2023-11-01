@@ -1,28 +1,85 @@
 ---
 title: 'BioHackEU23 report: Template for the very long title'
-title_short: 'BioHackEU23 #26: unknown chemical substances'
+title_short: 'BioHackEU23 #9: Cell type-specific and druggable pathway models and maps'
 tags:
-  - cheminformatics
-  - PubChem
-  - unknown chemical substances
+  - single-cell data
+  - pathway
+  - disease maps
+  - druggability
 authors:
-  - name: First Author
+  - name: Marek Ostaszewski
     affiliation: 1
-  - name: Last Author
-    orcid: 0000-0000-0000-0000
+  - Martina Kutmon
     affiliation: 2
+  - name: Naveed Ishaque
+    orcid: 0000-0000-0000-0000
+    affiliation: 3
+  - Ahmed Hemedan
+    affiliation: 4
+  - Alessandro Brandulas Cammarata
+    affiliation: 5
+  - Egon Willighagen
+    affiliation: 6
+  - Frederic Bastian
+    affiliation: 7
+  - George Gavriilidis
+    affiliation: 8
+  - Hasan Balci
+    affiliation: 2
+  - Kim Vucinic
+    affiliation: 9
+  - Kinza Rian
+    affiliation: 10
+  - Liya Zaygerman
+    affiliation: 11
+  - Marina Esteban-Medina
+    affiliation: 10
+  - Matti Hoch
+    affiliation: 12
+  - Sabrina Jagot
+    affiliation: 13
+  - Sandra Ng
+    affiliation: 14
+  - Sara Pita
+    affiliation: 15
 affiliations:
   - name: First Affiliation
     index: 1
   - name: Second Affiliation
     index: 2
+  - name: Second Affiliation
+    index: 3
+  - name: First Affiliation
+    index: 4
+  - name: Second Affiliation
+    index: 5
+  - name: Second Affiliation
+    index: 6
+  - name: First Affiliation
+    index: 7
+  - name: Second Affiliation
+    index: 8
+  - name: Second Affiliation
+    index: 9
+  - name: First Affiliation
+    index: 10
+  - name: Second Affiliation
+    index: 11
+  - name: Second Affiliation
+    index: 12
+  - name: First Affiliation
+    index: 13
+  - name: Second Affiliation
+    index: 14
+  - name: Second Affiliation
+    index: 15  
 date: 8 November 2023
 cito-bibliography: paper.bib
 event: BH23EU
 biohackathon_name: "BioHackathon Europe 2023"
 biohackathon_url:   "https://biohackathon-europe.org/"
 biohackathon_location: "Barcelona, Spain, 2023"
-group: Project 26
+group: Project 9
 # URL to project git repo --- should contain the actual paper.md:
 git_url: https://github.com/biohackrxiv/publication-template
 # This is the short authors description that is used at the
