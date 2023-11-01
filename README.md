@@ -1,3 +1,5 @@
+* add your text for the paper in paper/paper.md
+
 # BioHackrXiv Publication Template
 
 Minimal example of a [BioHackrXiv](https://biohackrxiv.org/) publication that can be generated with the
