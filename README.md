@@ -1,4 +1,4 @@
-_Instructions_
+_Instructions:_
 add your text for the paper in paper/paper.md
 
 ----
