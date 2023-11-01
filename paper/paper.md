@@ -91,36 +91,38 @@ authors_short: First Author \emph{et al.}
 
 As part of the BioHackathon Europe 2023, we here report...
 
-# Formatting
+# Results
 
-This document use Markdown and you can look at [this tutorial](https://www.markdowntutorial.com/).
-
-## Subsection level 2
-
+Description of the workflow.
 Please keep sections to a maximum of only two levels.
 
-## Tables and figures
+## Data
 
-Tables can be added in the following way, though alternatives are possible:
+**Single-cell dataset**
 
-Table: Note that table caption is automatically numbered and should be
-given before the table itself.
+**Drug-target information**
 
-| Header 1 | Header 2 |
-| -------- | -------- |
-| item 1 | item 2 |
-| item 3 | item 4 |
+## Maps
 
-A figure is added with:
+**Generation of map**
 
-![Caption for BioHackrXiv logo figure](./biohackrxiv.png)
+**Pruning of relevant components**
 
-# Other main section on your manuscript level 1
+## Analysis
 
-Lists can be added with:
+**Hipathia**
 
-1. Item 1
-2. Item 2
+**Boolean modeling**
+
+**PertFlow**
+
+**Network visualization**
+
+# Discussion
+
+# Concluding remarks
+
+
 
 # Citation Typing Ontology annotation
 
@@ -154,12 +156,6 @@ Possible CiTO typing annotation include:
 * disagreesWith
 * updates
 * citation: generic citation
-
-
-# Results
-
-
-# Discussion
 
 ...
 
