@@ -1,6 +1,6 @@
 ---
-title: 'BioHackEU23 report: Template for the very long title'
-title_short: 'BioHackEU23 #9: Cell type-specific and druggable pathway models and maps'
+title: 'BioHackEU23 report: Cell type-specific and druggable pathway models and maps'
+title_short: 'BioHackEU23 #9: Cell type-specific pathway maps'
 tags:
   - single-cell data
   - pathway
