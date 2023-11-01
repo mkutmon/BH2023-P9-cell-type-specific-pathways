@@ -1,4 +1,7 @@
-* add your text for the paper in paper/paper.md
+_Instructions_
+add your text for the paper in paper/paper.md
+
+----
 
 # BioHackrXiv Publication Template
 
