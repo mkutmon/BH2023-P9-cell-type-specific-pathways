@@ -73,7 +73,7 @@ git_url: https://github.com/biohackrxiv/publication-template
 authors_short: First Author \emph{et al.}
 ---
 
-Author order to be decided
+Author order to be decided, affiliations will be added later, add references in brackets with pubmed or doi
 
 # Introduction
 
