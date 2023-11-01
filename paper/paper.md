@@ -9,38 +9,37 @@ tags:
 authors:
   - name: Marek Ostaszewski
     affiliation: 1
-  - Martina Kutmon
+  - name: Martina Kutmon
     affiliation: 2
   - name: Naveed Ishaque
-    orcid: 0000-0000-0000-0000
     affiliation: 3
-  - Ahmed Hemedan
+  - name: Ahmed Hemedan
     affiliation: 4
-  - Alessandro Brandulas Cammarata
+  - name: Alessandro Brandulas Cammarata
     affiliation: 5
-  - Egon Willighagen
+  - name: Egon Willighagen
     affiliation: 6
-  - Frederic Bastian
+  - name: Frederic Bastian
     affiliation: 7
-  - George Gavriilidis
+  - name: George Gavriilidis
     affiliation: 8
-  - Hasan Balci
+  - name: Hasan Balci
     affiliation: 2
-  - Kim Vucinic
+  - name: Kim Vucinic
     affiliation: 9
-  - Kinza Rian
+  - name: Kinza Rian
     affiliation: 10
-  - Liya Zaygerman
+  - name: Liya Zaygerman
     affiliation: 11
-  - Marina Esteban-Medina
+  - name: Marina Esteban-Medina
     affiliation: 10
-  - Matti Hoch
+  - name: Matti Hoch
     affiliation: 12
-  - Sabrina Jagot
+  - name: Sabrina Jagot
     affiliation: 13
-  - Sandra Ng
+  - name: Sandra Ng
     affiliation: 14
-  - Sara Pita
+  - name: Sara Pita
     affiliation: 15
 affiliations:
   - name: First Affiliation
