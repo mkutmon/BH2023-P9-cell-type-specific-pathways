@@ -8,70 +8,57 @@ tags:
   - druggability
 authors:
   - name: Marek Ostaszewski
+    orcid: 0000-0003-1473-370X
     affiliation: 1
   - name: Martina Kutmon
-    affiliation: 2
+    orcid: 0000-0002-7699-8191
+    affiliation: 1
   - name: Naveed Ishaque
-    affiliation: 3
+    orcid: 0000-0002-8426-901X
+    affiliation: 1
   - name: Ahmed Hemedan
-    affiliation: 4
+    orcid: 0000-0001-7403-181X
+    affiliation: 1
   - name: Alessandro Brandulas Cammarata
-    affiliation: 5
+    orcid: 0009-0006-5956-9842
+    affiliation: 1
   - name: Egon Willighagen
-    affiliation: 6
+    orcid: 0000-0001-7542-0286
+    affiliation: 1
   - name: Frederic Bastian
-    affiliation: 7
+    orcid: 0000-0002-9415-5104
+    affiliation: 1
   - name: George Gavriilidis
-    affiliation: 8
+    orcid: 0000-0003-2575-4354
+    affiliation: 1
   - name: Hasan Balci
-    affiliation: 2
+    orcid: 0000-0001-8319-7758
+    affiliation: 1
   - name: Kim Vucinic
-    affiliation: 9
+    affiliation: 1
   - name: Kinza Rian
-    affiliation: 10
+    orcid: 0000-0003-4314-7208
+    affiliation: 1
   - name: Liya Zaygerman
-    affiliation: 11
+    orcid: 0009-0005-4947-6223
+    affiliation: 1
   - name: Marina Esteban-Medina
-    affiliation: 10
+    orcid: 0000-0003-2632-9587
+    affiliation: 1
   - name: Matti Hoch
-    affiliation: 12
+    orcid: 0000-0002-2486-0246
+    affiliation: 1
   - name: Sabrina Jagot
-    affiliation: 13
+    orcid: 0000-0002-6718-4794
+    affiliation: 1
   - name: Sandra Ng
-    affiliation: 14
+    orcid: 0000-0003-4524-6058
+    affiliation: 1
   - name: Sara Pita
-    affiliation: 15
+    affiliation: 1
 affiliations:
   - name: First Affiliation
     index: 1
-  - name: Second Affiliation
-    index: 2
-  - name: Second Affiliation
-    index: 3
-  - name: First Affiliation
-    index: 4
-  - name: Second Affiliation
-    index: 5
-  - name: Second Affiliation
-    index: 6
-  - name: First Affiliation
-    index: 7
-  - name: Second Affiliation
-    index: 8
-  - name: Second Affiliation
-    index: 9
-  - name: First Affiliation
-    index: 10
-  - name: Second Affiliation
-    index: 11
-  - name: Second Affiliation
-    index: 12
-  - name: First Affiliation
-    index: 13
-  - name: Second Affiliation
-    index: 14
-  - name: Second Affiliation
-    index: 15  
 date: 8 November 2023
 cito-bibliography: paper.bib
 event: BH23EU
@@ -86,6 +73,7 @@ git_url: https://github.com/biohackrxiv/publication-template
 authors_short: First Author \emph{et al.}
 ---
 
+Author order to be decided
 
 # Introduction
 
