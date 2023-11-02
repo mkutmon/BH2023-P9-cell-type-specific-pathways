@@ -107,6 +107,7 @@ Please keep sections to a maximum of only two levels.
 -   Perturbation analysis: A perturbation analysis was conducted to evaluate the effect on the topological robustness, dynamic resilience, and attractors reached by the models. Specifically, we focused on node perturbations, which alter the state of a single biomolecule through knockout and overexpressions.
 -   Sensitivity analysis in response to different information: The evaluation was performed by performing sensitivity analysis on a selected set of models, examining each biomolecule. Sensitivity analysis is a technique that assesses how changes in a model or system's inputs affect its output, in this case, the two attractors reached by the model (unperturbed and perturbed). To quantify the difference between the two attractors, similarity-based distance and identity-based distance were used.
 -   Stochastic Boolean model simulation: The simulations of the specified biological models were conducted using probabilistic Boolean modelling. This framework provides a tool for simulation of biological systems through discrete/continuous time Markov processes. It operates by utilising a Monte Carlo algorithm that simulates the system's evolution over time based on the initial conditions of the biomolecules and the interactions between them.\
+
 **PertFlow**
 
 **Network visualization**
