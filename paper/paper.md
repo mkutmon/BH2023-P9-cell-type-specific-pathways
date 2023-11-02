@@ -104,6 +104,8 @@ Please keep sections to a maximum of only two levels.
 
 **PertFlow**
 
+PertFlow is a Colab-based workflow geared towards fundamental scRNA-seq analysis, pathway and transcriptional factor bioinformatic analysis and mainly perturbational modeling.
+
 **Network visualization**
 
 # Discussion
