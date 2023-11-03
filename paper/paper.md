@@ -94,14 +94,29 @@ group: Project 9
 git_url: https://github.com/biohackrxiv/publication-template
 # This is the short authors description that is used at the
 # bottom of the generated paper (typically the first two authors):
-authors_short: First Author \emph{et al.}
+authors_short: M. Ostaszewski, M. Kutmon, N. Ishaque \emph{et al.}
 ---
-
-Author order to be decided, affiliations will be added later, add references in brackets with pubmed or doi
 
 # Introduction
 
-As part of the BioHackathon Europe 2023, we here report...
+At the BioHackathon Europe 2023, our group developed workflows for streamlined discovery of druggable targets in single cell RNAseq data to support research of new treatments for human diseases. Our motivation was to address new challenges of data interpretation in rapidly growing universe of scRNAseq datasets. We focused on analysis of druggable targets for important cells in Systemic Lupus Erythematosus (SLE): GSE162577, GSE142016, GSE135779. Summary of our project plan can be seen in the figure below.
+
+![overview](Overview_BH2023.png)
+
+**Data** involved work on three SLE scRNAseq datasets to identify cell types significantly affected by the disorder. Additionally, in collaboration with [Project 17](https://github.com/elixir-europe/biohackathon-projects-2023/tree/main/17) we developed interfaces for acquisition of drug target information, needed in downstream steps.
+
+**Diagrams** describes the work done to automatically assemble pathway and disease diagrams of mechanisms enriched in cell types identified in the *Data* step. We focused on the content from Reactome and Wikipathways databases, and from selected disease maps.
+
+**Analysis** part used the inputs from *Data* and *Diagrams* to run selected modelling tools for discovering key druggable mechanisms in SLE. Cell type-specific differentially expressed genes (DEGs), and drugs targetting them were the focus of perturbation analyses.
+
+By the end of the BioHackathon'23 we were able to significantly advance each of these areas:
+- DEGs for selected cell types (basophils and B-cells) were calculated
+- this was used to build two cell type-specific pathway maps available on a public server
+- a plugin for the MINERVA Platform was developed allowin interactive expport of the most relevant parts of the diagrams using drug target information and expression data
+- two methods of perturbation analysis can use the exported data for modelling analysis
+- an indepentent, data-driven drug discovery workflow was run to compare results with the pathway-based discovery workflow.
+
+These results are detailed below.
 
 # Results
 
