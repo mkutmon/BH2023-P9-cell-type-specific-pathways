@@ -111,9 +111,13 @@ At the BioHackathon Europe 2023, our group developed workflows for streamlined d
 
 By the end of the BioHackathon'23 we were able to significantly advance each of these areas:
 - DEGs for selected cell types (basophils and B-cells) were calculated
+
 - this was used to build two cell type-specific pathway maps available on a public server
+
 - a plugin for the MINERVA Platform was developed allowin interactive expport of the most relevant parts of the diagrams using drug target information and expression data
+
 - two methods of perturbation analysis can use the exported data for modelling analysis
+
 - an indepentent, data-driven drug discovery workflow was run to compare results with the pathway-based discovery workflow.
 
 These results are detailed below.
