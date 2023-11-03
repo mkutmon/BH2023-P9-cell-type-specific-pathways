@@ -21,7 +21,7 @@ authors:
     affiliation: 1
   - name: Alessandro Brandulas Cammarata
     orcid: 0009-0006-5956-9842
-    affiliation: 4
+    affiliation: 4,5
   - name: Frederic Bastian
     orcid: 0000-0002-9415-5104
     affiliation: 4,5
@@ -63,9 +63,9 @@ affiliations:
     index: 2
   - name: Charite University Hospital, DE
     index: 3
-  - name: University of Lausanne, CH
+  - name: Department of Ecology and Evolution, University of Lausanne, CH
     index: 4
-  - name: Swiss Institute of Bioinformatics, CH
+  - name: SIB Swiss Institute of Bioinformatics, CH
     index: 5
   - name: Institute of Applied Biosciences, GR
     index: 6
