@@ -77,7 +77,7 @@ affiliations:
     index: 9
   - name: University of Rostock, DE
     index: 10
-  - name: Université de Nantes, FR
+  - name: INRAE, LPGP, 35000, Rennes, FR
     index: 11
   - name: Queen Mary University of London, UK
     index: 12
@@ -142,6 +142,25 @@ Please keep sections to a maximum of only two levels.
 ## Analysis
 
 **Hipathia**
+
+- Mechanistic Modelling Method: Utilized *Hipathia*, a mechanistic modelling method based on a signal propagation algorithm.
+- Function: Assesses the activity of pathway diagrams in samples by considering gene expression values.
+- Approach: Treats pathways as electrical circuits (termed as circuits) and calculates activation levels for protein nodes within these circuits.
+- Node Composition: Includes single proteins, protein families, complexes, metabolites, and other possible nodes.
+- Activity Calculation:Employs node interactions (activation/inhibition) to determine circuit activity.
+- Signal Propagation: A signal value of 1 is passed through receptor nodes and modulated by gene expression until reaching the effector protein.
+- Differential Analysis: Enables the analysis of pathway activity and functional regulation between different groups. For detailed methodology, see PMC5354899.
+
+- Assessment of SLE Single-cell Data: We analyzed three single-cell RNAseq datasets of SLE patients, sourced from GEO with accession ids GEO162577, GEO142016, and GEO135779. Our goal was to quantify the intensity of deregulated molecular pathways across specific cell types.
+
+- Utilization of cell specific Pathway Diagrams and KEGG phisiological pathways: The research incorporated detailed pathway diagrams, including both cell type-specific pathways with druggable targets and comprehensive physiological pathways from the KEGG database, tailored to the Hipathia format for this study.
+
+- Discovery of Key Genes and Targets: Through the implementation of molecular pathways in Hipathia, we identified pivotal genes specific to both the disease and cell types, unveiling potential therapeutic targets that could reverse the effects of the disease. Results can be  access here: http://hipathia.babelomics.org/hack23/dev/
+
+- Effectiveness of Data Imputation: By contrasting the outcomes from datasets with ALRA-imputed values against those with only log normalization, we observed a significant improvement in Hipathia's results, underscoring the effectiveness of imputation in reducing data sparsity.
+
+-Prospective Drug Impact Assessment: Looking ahead, we are eager to explore the effects of promising pharmacological targets on the SLE cell-specific pathways.
+
 
 **Boolean modeling**
 -   Construction of Boolean modelling: The diagrams analysed were obtained from the MINERVA Platform. This platform provides the capability to export specific diagrams from the map. The diagrams in CellDesigner SBML format were then automatically transformed into SBML-qual format using the CaSQ (CellDesigner as SBML-qual) tool. CaSQ uses specific rewriting rules to reduce diagrams from Process Description to Activity Flow notation, and to infer the logical functions and translate the interactions.
