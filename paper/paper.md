@@ -12,53 +12,77 @@ authors:
     affiliation: 1
   - name: Martina Kutmon
     orcid: 0000-0002-7699-8191
-    affiliation: 1
+    affiliation: 2
   - name: Naveed Ishaque
     orcid: 0000-0002-8426-901X
-    affiliation: 1
+    affiliation: 3
   - name: Ahmed Hemedan
     orcid: 0000-0001-7403-181X
     affiliation: 1
   - name: Alessandro Brandulas Cammarata
     orcid: 0009-0006-5956-9842
-    affiliation: 1
-  - name: Egon Willighagen
-    orcid: 0000-0001-7542-0286
-    affiliation: 1
+    affiliation: 4
   - name: Frederic Bastian
     orcid: 0000-0002-9415-5104
-    affiliation: 1
+    affiliation: 4,5
   - name: George Gavriilidis
     orcid: 0000-0003-2575-4354
-    affiliation: 1
+    affiliation: 6
   - name: Hasan Balci
     orcid: 0000-0001-8319-7758
-    affiliation: 1
+    affiliation: 2
+  - name: Egon Willighagen
+    orcid: 0000-0001-7542-0286
+    affiliation: 2
   - name: Kim Vucinic
-    affiliation: 1
-  - name: Kinza Rian
-    orcid: 0000-0003-4314-7208
-    affiliation: 1
-  - name: Liya Zaygerman
-    orcid: 0009-0005-4947-6223
-    affiliation: 1
+    affiliation: 7
   - name: Marina Esteban-Medina
     orcid: 0000-0003-2632-9587
-    affiliation: 1
+    affiliation: 8
+  - name: Kinza Rian
+    orcid: 0000-0003-4314-7208
+    affiliation: 8
+  - name: Liya Zaygerman
+    orcid: 0009-0005-4947-6223
+    affiliation: 9
   - name: Matti Hoch
     orcid: 0000-0002-2486-0246
-    affiliation: 1
+    affiliation: 10
   - name: Sabrina Jagot
     orcid: 0000-0002-6718-4794
-    affiliation: 1
+    affiliation: 11
   - name: Sandra Ng
     orcid: 0000-0003-4524-6058
-    affiliation: 1
+    affiliation: 12
   - name: Sara Pita
-    affiliation: 1
+    affiliation: 13
 affiliations:
-  - name: First Affiliation
+  - name: University of Luxembourg, LU
     index: 1
+  - name: Maastricht University, NL
+    index: 2
+  - name: Charite University Hospital, DE
+    index: 3
+  - name: University of Lausanne, CH
+    index: 4
+  - name: Swiss Institute of Bioinformatics, CH
+    index: 5
+  - name: Institute of Applied Biosciences, GR
+    index: 6
+  - name: Institute of Molecular Genetics of the Czech Academy of Sciences, CZ
+    index: 7
+  - name: Fundación Progreso y Salud, ES
+    index: 8
+  - name: Helmholtz Munich, DE
+    index: 9
+  - name: University of Rostock, DE
+    index: 10
+  - name: Université de Nantes, FR
+    index: 11
+  - name: Queen Mary University of London, UK
+    index: 12
+  - name: Technical University of Denmark, DK
+    index: 13
 date: 8 November 2023
 cito-bibliography: paper.bib
 event: BH23EU
