@@ -35,6 +35,7 @@ authors:
     orcid: 0000-0001-7542-0286
     affiliation: 2
   - name: Kim Vucinic
+    orcid: 0009-0008-1553-1935
     affiliation: 7
   - name: Marina Esteban-Medina
     orcid: 0000-0003-2632-9587
