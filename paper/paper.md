@@ -157,7 +157,8 @@ Please keep sections to a maximum of only two levels.
 - Drug Repurposing:   Using ASGARD package, PertFlow facilitated the repurposing of several compounds towards cell groups of interest (e.g., geldamycin that is under investigation for SLE was captured).
 
 - **Network visualization** : Going beyond the current PertFlow architecture, a novel network model was created connecting genes to drugs to cell-types, creating an informative multi-partite graph that can be traversed and analyzed for deeper biological insights
-**Compatibility with Hipathia and boolean modelling**: The transformation of PertFlow results into a graph can enable a seamless integration with the modelling performed by Hipathia in terms of genes of interest, potential druggable targets and putative signaling cascades
+- **Compatibility with Hipathia and boolean modelling**: The transformation of PertFlow results into a graph can enable a seamless integration with the modelling performed by Hipathia in terms of genes of interest, potential druggable targets and putative signaling cascades
+
 # Discussion
 
 # Concluding remarks
