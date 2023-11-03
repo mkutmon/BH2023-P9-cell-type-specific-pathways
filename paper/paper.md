@@ -135,9 +135,17 @@ Please keep sections to a maximum of only two levels.
 
 ## Maps
 
-**Generation of map**
+**Automated map assembly**
 
-**Pruning of relevant components**
+- The automap workflow [PMID:37502697] was improved for better representation of mutliple asembled pathways, producing an automatically generated summary diagram
+- cell specific expression data can be provided to be autmatically included as a data overlay
+- annotation of assembled maps was harmonised
+
+**Selection of relevant components**
+
+- For cell-specific maps, a plugin was developed to select only those compnents of a map that are relevant for a given cell type (coverage in cell expression data) and druggability (drug target information from earlier).
+
+- The plugin exports selected map components in modelling-compatible format for HiPathia and Boolean Modelling downstream (see below). 
 
 ## Analysis
 
