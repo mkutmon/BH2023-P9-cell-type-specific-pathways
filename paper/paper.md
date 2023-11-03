@@ -132,6 +132,9 @@ Please keep sections to a maximum of only two levels.
 **Single-cell dataset**
 
 **Drug-target information**
+- Using the package pyBioDataFuse (Project 17) and their OpenTargets annotator, developed a python function that takes a list of genes, and attaches any drug interactions and relations idenfied in OpenTargets
+
+- started working on an annotator for ChEMBL for addition drug interactions
 
 ## Maps
 
