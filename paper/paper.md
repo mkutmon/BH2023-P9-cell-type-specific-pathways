@@ -21,7 +21,7 @@ authors:
     affiliation: 1
   - name: Alessandro Brandulas Cammarata
     orcid: 0009-0006-5956-9842
-    affiliation: 4
+    affiliation: 4,5
   - name: Frederic Bastian
     orcid: 0000-0002-9415-5104
     affiliation: 4,5
@@ -35,6 +35,7 @@ authors:
     orcid: 0000-0001-7542-0286
     affiliation: 2
   - name: Kim Vucinic
+    orcid: 0009-0008-1553-1935
     affiliation: 7
   - name: Marina Esteban-Medina
     orcid: 0000-0003-2632-9587
@@ -63,9 +64,9 @@ affiliations:
     index: 2
   - name: Charite University Hospital, DE
     index: 3
-  - name: University of Lausanne, CH
+  - name: Department of Ecology and Evolution, University of Lausanne, CH
     index: 4
-  - name: Swiss Institute of Bioinformatics, CH
+  - name: SIB Swiss Institute of Bioinformatics, CH
     index: 5
   - name: Institute of Applied Biosciences, GR
     index: 6
@@ -99,7 +100,7 @@ authors_short: M. Ostaszewski, M. Kutmon, N. Ishaque \emph{et al.}
 
 # Introduction
 
-At the BioHackathon Europe 2023, our group developed workflows for streamlined discovery of druggable targets in single cell RNAseq data to support research of new treatments for human diseases. Our motivation was to address new challenges of data interpretation in rapidly growing universe of scRNAseq datasets. We focused on analysis of druggable targets for important cells in Systemic Lupus Erythematosus (SLE): GSE162577, GSE142016, GSE135779. Summary of our project plan can be seen in the figure below.
+At the BioHackathon Europe 2023, our group developed workflows for streamlined discovery of druggable targets in single cell RNAseq data to support research of new treatments for human diseases. Our motivation was to address new challenges of data interpretation in rapidly growing universe of scRNAseq datasets. We focused on analysis of druggable targets for important cells in Systemic Lupus Erythematosus (SLE): GSE162577, GSE142016, GSE135779 `[@usesDataFrom:deng2021expression, @usesDataFrom:mistry2019transcriptomic, @usesDataFrom:nehar2020mapping]`. Summary of our project plan can be seen in the figure below.
 
 ![overview](Overview_BH2023.png)
 
@@ -130,6 +131,20 @@ Please keep sections to a maximum of only two levels.
 ## Data
 
 **Single-cell dataset**
+
+As a source of single-cell RNA-seq (scRNA-Seq) data to study the impact of lupus disease at the gene expression level in different cell types, we aggreagated together 3 datasets retrieved from the GEO database: GSE162577, GSE142016, and GSE135779 `[@usesDataFrom:deng2021expression, @usesDataFrom:mistry2019transcriptomic, @usesDataFrom:nehar2020mapping]`. The analysis was done with Seurat package `[@usesMethodIn:hao2021integrated]`. We corrected batch effect using Harmony package`[@usesMethodIn:korsunsky2019fast]`, scTransform `[@usesMethodIn:hafemeister2019normalization]` for normalization and variance stabilization, and singleR `[@usesMethodIn:aran2019reference]` for cell typing.
+
+Sixteen cell types were originally identified in our merged dataset: B cells, basophils, CD4+ T cells, CD8+ T cells, CMPs, dendritic cells, eosinophils, erythroid cells, GMPs, granulocytes, HSCs, megakaryocytes, MEPs, monocytes, NK cells, and NK T cells. After filtering out cell types with less than 100 cells associated to them, we retain 8 cell types: B cells, basophils, CD4+ T cells, CD8+ T cells, dendritic cells, granulocytes, monocytes, NK cells. Finally, during this Biohackathon, we prioritized analyses in 2 cell types: B cells and basophils. For gene expression analyses, we filtered out genes having less than 100 counts over the whole dataset.
+
+We then identified differentially expressed genes for each cell type between lupus status and control status (DEG tests), as well as marker genes corresponding to genes differentially expressed in a cell type compared to all other cell types, regardless of the donor status (marker tests). We merged uncorrected gene counts of cells per sample and cell type by a pseudobulk approach (3 lupus samples, 3 control samples). We performed several analyses using the Seurat package for DEG tests and marker tests using:
+* DESeq2 `[@citation:love2014moderated]` based on unnormalized uncorrected read counts
+* MAST `[@citation:finak2015mast]` based on unnormalized uncorrected read counts
+* DESeq2 based on expression score approach from Bgee database `[@citation:bastian2021bgee]`
+* MAST based on expression score approach from Bgee database
+
+The Bgee expression score is a non-parametric statistics allowing to make expression levels comparable between experiments, conditions, genes. Genes are ranked in each sample and cell type in ascending order of their expression level. These ranks are then rescaled between 1 and 1000 using a linear transform. These rescaled ranks are then weighted for downstream analyses based on sample and cell type information (e.g., number of mapped reads); or this Biohackathon each sample and cell type was given the same weight of 1.
+
+After evaluating the accuracy of the results using these different approaches, we selected the results produced by DESeq2 and Bgee expression scores for the rest of the downstream analyses.
 
 **Drug-target information**
 
