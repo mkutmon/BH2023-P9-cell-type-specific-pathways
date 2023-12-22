@@ -147,6 +147,9 @@ The Bgee expression score is a non-parametric statistics allowing to make expres
 After evaluating the accuracy of the results using these different approaches, we selected the results produced by DESeq2 and Bgee expression scores for the rest of the downstream analyses.
 
 **Drug-target information**
+- Using the package pyBioDataFuse (Project 17) and their OpenTargets annotator, developed a python function that takes a list of genes, and attaches any drug interactions and relations idenfied in OpenTargets
+
+- started working on an annotator for ChEMBL for addition drug interactions
 
 ## Maps
 
