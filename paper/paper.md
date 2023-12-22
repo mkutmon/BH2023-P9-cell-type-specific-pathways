@@ -12,53 +12,78 @@ authors:
     affiliation: 1
   - name: Martina Kutmon
     orcid: 0000-0002-7699-8191
-    affiliation: 1
+    affiliation: 2
   - name: Naveed Ishaque
     orcid: 0000-0002-8426-901X
-    affiliation: 1
+    affiliation: 3
   - name: Ahmed Hemedan
     orcid: 0000-0001-7403-181X
     affiliation: 1
   - name: Alessandro Brandulas Cammarata
     orcid: 0009-0006-5956-9842
-    affiliation: 1
-  - name: Egon Willighagen
-    orcid: 0000-0001-7542-0286
-    affiliation: 1
+    affiliation: 4,5
   - name: Frederic Bastian
     orcid: 0000-0002-9415-5104
-    affiliation: 1
+    affiliation: 4,5
   - name: George Gavriilidis
     orcid: 0000-0003-2575-4354
-    affiliation: 1
+    affiliation: 6
   - name: Hasan Balci
     orcid: 0000-0001-8319-7758
-    affiliation: 1
+    affiliation: 2
+  - name: Egon Willighagen
+    orcid: 0000-0001-7542-0286
+    affiliation: 2
   - name: Kim Vucinic
-    affiliation: 1
-  - name: Kinza Rian
-    orcid: 0000-0003-4314-7208
-    affiliation: 1
-  - name: Liya Zaygerman
-    orcid: 0009-0005-4947-6223
-    affiliation: 1
+    orcid: 0009-0008-1553-1935
+    affiliation: 7
   - name: Marina Esteban-Medina
     orcid: 0000-0003-2632-9587
-    affiliation: 1
+    affiliation: 8
+  - name: Kinza Rian
+    orcid: 0000-0003-4314-7208
+    affiliation: 8
+  - name: Liya Zaygerman
+    orcid: 0009-0005-4947-6223
+    affiliation: 9
   - name: Matti Hoch
     orcid: 0000-0002-2486-0246
-    affiliation: 1
+    affiliation: 10
   - name: Sabrina Jagot
     orcid: 0000-0002-6718-4794
-    affiliation: 1
+    affiliation: 11
   - name: Sandra Ng
     orcid: 0000-0003-4524-6058
-    affiliation: 1
+    affiliation: 12
   - name: Sara Pita
-    affiliation: 1
+    affiliation: 13
 affiliations:
-  - name: First Affiliation
+  - name: University of Luxembourg, LU
     index: 1
+  - name: Maastricht University, NL
+    index: 2
+  - name: Charite University Hospital, DE
+    index: 3
+  - name: Department of Ecology and Evolution, University of Lausanne, CH
+    index: 4
+  - name: SIB Swiss Institute of Bioinformatics, CH
+    index: 5
+  - name: Institute of Applied Biosciences, GR
+    index: 6
+  - name: Institute of Molecular Genetics of the Czech Academy of Sciences, CZ
+    index: 7
+  - name: Fundación Progreso y Salud, ES
+    index: 8
+  - name: Helmholtz Munich, DE
+    index: 9
+  - name: University of Rostock, DE
+    index: 10
+  - name: INRAE, LPGP, 35000, Rennes, FR
+    index: 11
+  - name: Queen Mary University of London, UK
+    index: 12
+  - name: Technical University of Denmark, DK
+    index: 13
 date: 8 November 2023
 cito-bibliography: paper.bib
 event: BH23EU
@@ -70,14 +95,33 @@ group: Project 9
 git_url: https://github.com/biohackrxiv/publication-template
 # This is the short authors description that is used at the
 # bottom of the generated paper (typically the first two authors):
-authors_short: First Author \emph{et al.}
+authors_short: M. Ostaszewski, M. Kutmon, N. Ishaque \emph{et al.}
 ---
-
-Author order to be decided, affiliations will be added later, add references in brackets with pubmed or doi
 
 # Introduction
 
-As part of the BioHackathon Europe 2023, we here report...
+At the BioHackathon Europe 2023, our group developed workflows for streamlined discovery of druggable targets in single cell RNAseq data to support research of new treatments for human diseases. Our motivation was to address new challenges of data interpretation in rapidly growing universe of scRNAseq datasets. We focused on analysis of druggable targets for important cells in Systemic Lupus Erythematosus (SLE): GSE162577, GSE142016, GSE135779 `[@usesDataFrom:deng2021expression, @usesDataFrom:mistry2019transcriptomic, @usesDataFrom:nehar2020mapping]`. Summary of our project plan can be seen in the figure below.
+
+![overview](Overview_BH2023.png)
+
+**Data** involved work on three SLE scRNAseq datasets to identify cell types significantly affected by the disorder. Additionally, in collaboration with [Project 17](https://github.com/elixir-europe/biohackathon-projects-2023/tree/main/17) we developed interfaces for acquisition of drug target information, needed in downstream steps.
+
+**Diagrams** describes the work done to automatically assemble pathway and disease diagrams of mechanisms enriched in cell types identified in the *Data* step. We focused on the content from Reactome and Wikipathways databases, and from selected disease maps.
+
+**Analysis** part used the inputs from *Data* and *Diagrams* to run selected modelling tools for discovering key druggable mechanisms in SLE. Cell type-specific differentially expressed genes (DEGs), and drugs targetting them were the focus of perturbation analyses.
+
+By the end of the BioHackathon'23 we were able to significantly advance each of these areas:
+- DEGs for selected cell types (basophils and B-cells) were calculated
+
+- this was used to build two cell type-specific pathway maps available on a public server
+
+- a plugin for the MINERVA Platform was developed allowin interactive expport of the most relevant parts of the diagrams using drug target information and expression data
+
+- two methods of perturbation analysis can use the exported data for modelling analysis
+
+- an indepentent, data-driven drug discovery workflow was run to compare results with the pathway-based discovery workflow.
+
+These results are detailed below.
 
 # Results
 
@@ -88,25 +132,80 @@ Please keep sections to a maximum of only two levels.
 
 **Single-cell dataset**
 
+As a source of single-cell RNA-seq (scRNA-Seq) data to study the impact of lupus disease at the gene expression level in different cell types, we aggreagated together 3 datasets retrieved from the GEO database: GSE162577, GSE142016, and GSE135779 `[@usesDataFrom:deng2021expression, @usesDataFrom:mistry2019transcriptomic, @usesDataFrom:nehar2020mapping]`. The analysis was done with Seurat package `[@usesMethodIn:hao2021integrated]`. We corrected batch effect using Harmony package`[@usesMethodIn:korsunsky2019fast]`, scTransform `[@usesMethodIn:hafemeister2019normalization]` for normalization and variance stabilization, and singleR `[@usesMethodIn:aran2019reference]` for cell typing.
+
+Sixteen cell types were originally identified in our merged dataset: B cells, basophils, CD4+ T cells, CD8+ T cells, CMPs, dendritic cells, eosinophils, erythroid cells, GMPs, granulocytes, HSCs, megakaryocytes, MEPs, monocytes, NK cells, and NK T cells. After filtering out cell types with less than 100 cells associated to them, we retain 8 cell types: B cells, basophils, CD4+ T cells, CD8+ T cells, dendritic cells, granulocytes, monocytes, NK cells. Finally, during this Biohackathon, we prioritized analyses in 2 cell types: B cells and basophils. For gene expression analyses, we filtered out genes having less than 100 counts over the whole dataset.
+
+We then identified differentially expressed genes for each cell type between lupus status and control status (DEG tests), as well as marker genes corresponding to genes differentially expressed in a cell type compared to all other cell types, regardless of the donor status (marker tests). We merged uncorrected gene counts of cells per sample and cell type by a pseudobulk approach (3 lupus samples, 3 control samples). We performed several analyses using the Seurat package for DEG tests and marker tests using:
+* DESeq2 `[@citation:love2014moderated]` based on unnormalized uncorrected read counts
+* MAST `[@citation:finak2015mast]` based on unnormalized uncorrected read counts
+* DESeq2 based on expression score approach from Bgee database `[@citation:bastian2021bgee]`
+* MAST based on expression score approach from Bgee database
+
+The Bgee expression score is a non-parametric statistics allowing to make expression levels comparable between experiments, conditions, genes. Genes are ranked in each sample and cell type in ascending order of their expression level. These ranks are then rescaled between 1 and 1000 using a linear transform. These rescaled ranks are then weighted for downstream analyses based on sample and cell type information (e.g., number of mapped reads); or this Biohackathon each sample and cell type was given the same weight of 1.
+
+After evaluating the accuracy of the results using these different approaches, we selected the results produced by DESeq2 and Bgee expression scores for the rest of the downstream analyses.
+
 **Drug-target information**
+- Using the package pyBioDataFuse (Project 17) and their OpenTargets annotator, developed a python function that takes a list of genes, and attaches any drug interactions and relations idenfied in OpenTargets
+
+- started working on an annotator for ChEMBL for addition drug interactions
 
 ## Maps
 
-**Generation of map**
+**Automated map assembly**
 
-**Pruning of relevant components**
+- The automap workflow [PMID:37502697] was improved for better representation of mutliple asembled pathways, producing an automatically generated summary diagram
+- cell specific expression data can be provided to be autmatically included as a data overlay
+- annotation of assembled maps was harmonised
+
+**Selection of relevant components**
+
+- For cell-specific maps, a plugin was developed to select only those compnents of a map that are relevant for a given cell type (coverage in cell expression data) and druggability (drug target information from earlier).
+
+- The plugin exports selected map components in modelling-compatible format for HiPathia and Boolean Modelling downstream (see below). 
 
 ## Analysis
 
 **Hipathia**
 
+- Mechanistic Modelling Method: Utilized *Hipathia*, a mechanistic modelling method based on a signal propagation algorithm.
+- Function: Assesses the activity of pathway diagrams in samples by considering gene expression values.
+- Approach: Treats pathways as electrical circuits (termed as circuits) and calculates activation levels for protein nodes within these circuits.
+- Node Composition: Includes single proteins, protein families, complexes, metabolites, and other possible nodes.
+- Activity Calculation:Employs node interactions (activation/inhibition) to determine circuit activity.
+- Signal Propagation: A signal value of 1 is passed through receptor nodes and modulated by gene expression until reaching the effector protein.
+- Differential Analysis: Enables the analysis of pathway activity and functional regulation between different groups. For detailed methodology, see PMC5354899.
+
+- Assessment of SLE Single-cell Data: We analyzed three single-cell RNAseq datasets of SLE patients, sourced from GEO with accession ids GEO162577, GEO142016, and GEO135779. Our goal was to quantify the intensity of deregulated molecular pathways across specific cell types.
+
+- Utilization of cell specific Pathway Diagrams and KEGG phisiological pathways: The research incorporated detailed pathway diagrams, including both cell type-specific pathways with druggable targets and comprehensive physiological pathways from the KEGG database, tailored to the Hipathia format for this study.
+
+- Discovery of Key Genes and Targets: Through the implementation of molecular pathways in Hipathia, we identified pivotal genes specific to both the disease and cell types, unveiling potential therapeutic targets that could reverse the effects of the disease. Results can be  access here: http://hipathia.babelomics.org/hack23/dev/
+
+- Effectiveness of Data Imputation: By contrasting the outcomes from datasets with ALRA-imputed values against those with only log normalization, we observed a significant improvement in Hipathia's results, underscoring the effectiveness of imputation in reducing data sparsity.
+
+-Prospective Drug Impact Assessment: Looking ahead, we are eager to explore the effects of promising pharmacological targets on the SLE cell-specific pathways.
+
+
 **Boolean modeling**
+-   Construction of Boolean modelling: The diagrams analysed were obtained from the MINERVA Platform. This platform provides the capability to export specific diagrams from the map. The diagrams in CellDesigner SBML format were then automatically transformed into SBML-qual format using the CaSQ (CellDesigner as SBML-qual) tool. CaSQ uses specific rewriting rules to reduce diagrams from Process Description to Activity Flow notation, and to infer the logical functions and translate the interactions.
+-   Topological analysis of the Boolean model: The structural and functional correctness of BM was evaluated by analysing the interactions between the biomolecules. To this end the topological features of the BM were analysed as a network.
+-   Model analysis with different updating schemes: The behaviour of a BM under different update schemes was visualised through state transition graphs (see section 5 in the supplementary file), which represent all possible states of the system and the transitions between them. The state transition graph illustrates the range of outcomes for a given initial condition based on the update scheme used. Both update schemes demonstrated the ability to simulate expected system behaviour.
+-   Perturbation analysis: A perturbation analysis was conducted to evaluate the effect on the topological robustness, dynamic resilience, and attractors reached by the models. Specifically, we focused on node perturbations, which alter the state of a single biomolecule through knockout and overexpressions.
+-   Sensitivity analysis in response to different information: The evaluation was performed by performing sensitivity analysis on a selected set of models, examining each biomolecule. Sensitivity analysis is a technique that assesses how changes in a model or system's inputs affect its output, in this case, the two attractors reached by the model (unperturbed and perturbed). To quantify the difference between the two attractors, similarity-based distance and identity-based distance were used.
+-   Stochastic Boolean model simulation: The simulations of the specified biological models were conducted using probabilistic Boolean modelling. This framework provides a tool for simulation of biological systems through discrete/continuous time Markov processes. It operates by utilising a Monte Carlo algorithm that simulates the system's evolution over time based on the initial conditions of the biomolecules and the interactions between them.
 
 **PertFlow**
-
 PertFlow is a Colab-based workflow geared towards fundamental scRNA-seq analysis, pathway and transcriptional factor bioinformatic analysis and mainly perturbational modeling.
+-  Probing for ground truths: Using Decoupler and pseudobulk analysis for distinct cell types, PertFlow enable the leveraging of active TFs and pathways preferentially perturbed in SLE compared to normal controls (e.g., RFX5, MEF2C, ELK4, Hypoxia, NFkb signalling) - these signaling components and patterns are corroborated by the pertinent literature
+- Cell type prioritization: Deploying AugurPy package, PertFlow detected that NK T cells, B cells and Basophils were the most affect cell groups due to the SLE perturbation
+- Drug Repurposing:   Using ASGARD package, PertFlow facilitated the repurposing of several compounds towards cell groups of interest (e.g., geldamycin that is under investigation for SLE was captured).
 
 **Network visualization**
+=======
+- **Network visualization** : Going beyond the current PertFlow architecture, a novel network model was created connecting genes to drugs to cell-types, creating an informative multi-partite graph that can be traversed and analyzed for deeper biological insights
+- **Compatibility with Hipathia and boolean modelling**: The transformation of PertFlow results into a graph can enable a seamless integration with the modelling performed by Hipathia in terms of genes of interest, potential druggable targets and putative signaling cascades
 
 # Discussion
 
